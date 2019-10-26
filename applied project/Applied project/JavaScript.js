@@ -3,7 +3,7 @@ function createCaptcha() {
     //clear the contents of captcha div first
     document.getElementById('captcha').innerHTML = "";
     var charsArray =
-        "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+        "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var lengthOtp = 6;
     var captcha = [];
     for (var i = 0; i < lengthOtp; i++) {
@@ -27,8 +27,9 @@ function createCaptcha() {
 function validateCaptcha() {
     event.preventDefault();
     debugger
-    if (document.getElementById("cpatchaTextBox").value == code) {
-        alert("Valid Captcha")
+    if(document.getElementById("TextBox7").value == code) {
+        alert("Registration has done successfully")
+       // location.href("WebForm1.aspx");
     } else {
         alert("Enter a valid Captcha");
         createCaptcha();

@@ -101,8 +101,10 @@ input,date[type=text] {
 </style>
 </head>
 <body>
-    
+    <p style="float: right">
+            <a href="WebForm1.aspx" style="float: right; color: #000000">Logout</a></p>
 <header>
+    
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 </header>
 
