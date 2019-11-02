@@ -37,7 +37,7 @@
         &nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:Button ID="Button1" class= "button" runat="server" Text="Search" />
         <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [User Id] AS User_Id, [First Name] AS First_Name, [Last Name] AS Last_Name, [Access Type] AS Access_Type, [Department] FROM [user]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [User_Id], [First_Name], [Last_Name], [Access_Type], [Department] FROM [auser]"></asp:SqlDataSource>
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="User_Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="995px">
             <AlternatingRowStyle BackColor="White" />

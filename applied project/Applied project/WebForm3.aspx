@@ -14,5 +14,8 @@
     Access Requests</p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <h2>Welcome Administrator</h2>
+    <form id="form1" runat="server">
+    <h2>Welcome <asp:Label ID="Label1" runat="server"></asp:Label>
+        </h2>
+    </form>
 </asp:Content>

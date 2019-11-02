@@ -11,15 +11,15 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
     <form id="form1" runat="server">
-    <p>
-        <h2>USER PROFILE</h2></p>
+    
+        <h2>USER PROFILE</h2>
         <p> 
             Email Address
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         </p>
         <p>
             Password
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" type="password" runat="server"></asp:TextBox>
         </p>
         <p>
             First Name
@@ -30,20 +30,19 @@
             <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
         </p>
         <p>
-            Date of Birth <input type ="date" id="date" >
+            Date of Birth <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
            <i class="fa fa-calendar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i>
-            <asp:Button ID="Button2" runat="server" Text="Request Elevated Access" />
+            <asp:Button ID="Button2" runat="server" Text="Request Elevated Access" OnClick="Button2_Click" />
     </p>
         <p>
             Access Type
             <asp:DropDownList ID="DropDownList1" class="DropDownList" runat="server">
-                <asp:ListItem>Administrator</asp:ListItem>
                 <asp:ListItem>Management</asp:ListItem>
                 <asp:ListItem>Member</asp:ListItem>
             </asp:DropDownList>
         </p>
         <p>
-            Phone Number <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+            Phone Number <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
         </p>
         <p>
             Department
@@ -57,13 +56,14 @@
             </asp:DropDownList>
         </p>
         <p>
-            Address <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+            Address <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
         </p>
         <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
         </p>
         <p>
-            <asp:Button ID="Button1" class="button" runat="server" Text="Edit" Width="108px" />
+            <asp:Button ID="Button1" class="button" runat="server" Text="Edit" Width="108px" OnClick="Button1_Click" />
         </p>
     </form>
 </asp:Content>

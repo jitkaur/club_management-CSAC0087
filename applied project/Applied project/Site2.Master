@@ -4,9 +4,11 @@
 
 <html>
 <head runat="server">
-<title>CSS Template</title>
+<title>Club Management</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 * {
@@ -14,7 +16,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;  
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Style the header */
@@ -67,6 +69,7 @@ input,date[type=text] {
     box-sizing: border-box;
     width:240px;
     height:30px;
+
 }
 
 /* style for button */
@@ -98,11 +101,12 @@ input,date[type=text] {
     height: auto;
   }
 }
+
 </style>
 </head>
 <body>
     <p style="float: right">
-            <a href="WebForm1.aspx" style="float: right; color: #000000">Logout</a></p>
+            <a href="../WebForm1.aspx" style="float: right; color: #000000">Logout</a></p>
 <header>
     
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
@@ -123,6 +127,5 @@ input,date[type=text] {
 <footer>
    
 </footer>
-
 </body>
 </html>

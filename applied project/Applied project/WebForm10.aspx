@@ -34,6 +34,15 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="User_Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="995px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
+                <asp:TemplateField>
+                    <EditItemTemplate>
+                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                    </ItemTemplate>
+                    <ControlStyle Width="85px" />
+                </asp:TemplateField>
                 <asp:BoundField DataField="User_Id" HeaderText="User_Id" ReadOnly="True" SortExpression="User_Id" />
                 <asp:BoundField DataField="First_Name" HeaderText="First_Name" SortExpression="First_Name" />
                 <asp:BoundField DataField="Last_Name" HeaderText="Last_Name" SortExpression="Last_Name" />

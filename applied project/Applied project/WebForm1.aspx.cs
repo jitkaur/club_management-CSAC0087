@@ -27,9 +27,20 @@ namespace Applied_project
                 string qry = "select * from signup where email='" + uid + "' and password='" + pass + "'";
                 SqlCommand cmd = new SqlCommand(qry, conn);
                 SqlDataReader sdr = cmd.ExecuteReader();
-                if (sdr.Read())
+                if(sdr.Read())
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Login has been done successfully');window.location.href='WebForm10.aspx';", true);
+                    if(TextBox1.Text == "admin@gmail.com")
+                    {
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Login has been done successfully');window.location.href='admin/WebForm3.aspx';", true);
+                    }
+                    else if(TextBox1.Text == "elevator@gmail.com")
+                    {
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Login has been done successfully');window.location.href='middleware/WebForm4.aspx';", true);
+                    }
+                    else
+                    {
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Login has been done successfully');window.location.href='WebForm5.aspx';", true);
+                    }
                 }
                 else
                 {
@@ -41,6 +52,11 @@ namespace Applied_project
             {
                 Response.Write(ex.Message);
             }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "window.location.href='WebForm2.aspx';", true);
         }
     }  
 }

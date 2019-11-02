@@ -31,14 +31,12 @@ main {
     float: left;
     padding: 20px;
     width: 25%;
-    background: red;
 }
 
 article {
     float: left;
     padding: 20px;
     width: 25%;
-    background: green;
 }
 
 /* Clear floats after the columns */
@@ -56,7 +54,7 @@ footer {
 }
 
 /* style for textbox */
-input[type=text], input[type=date] {
+input[type=text], input[type=date], input[type=password] {
     padding: 8px 20px;
     display: inline-block;
     border: 1px solid #ccc;

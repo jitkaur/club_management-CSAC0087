@@ -4,11 +4,11 @@
 
 <html>
 <head runat="server">
-<title>CSS Template</title>
+<title>Club Management</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="JavaScript.js">
-    </script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 * {
@@ -60,7 +60,7 @@ footer {
 }
 
 /* style for textbox */
-input[type=text] {
+input[type=text], input[type=password] {
     padding: 8px 20px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -89,9 +89,10 @@ input[type=text] {
     height: auto;
   }
 }
+
 </style>
 </head>
-<body onload="createCaptcha()">
+<body>
 <header>
   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 </header>

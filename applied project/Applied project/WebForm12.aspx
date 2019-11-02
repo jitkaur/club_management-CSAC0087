@@ -27,21 +27,29 @@
         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa fa-search" style="border-color: #FFFFFF; background-color: #FFFFFF; "></i>
         &nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" class= "button" runat="server" Text="Search" />
+        <asp:Button ID="Button1" class= "button" runat="server" Text="Search" OnClick="Button1_Click" />
         &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" class= "button" runat="server" Text="Approve" />
-&nbsp;<asp:Button ID="Button3" class= "button" runat="server" Text="Decline" />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Request Id] AS Request_Id, [First Name] AS First_Name, [Last Name] AS Last_Name, [Department], [Request Status] AS Request_Status FROM [accessuser]"></asp:SqlDataSource>
+        <asp:Button ID="Button2" class= "button" runat="server" Text="Approve" OnClick="Button2_Click" />
+&nbsp;<asp:Button ID="Button3" class= "button" runat="server" Text="Decline" OnClick="Button3_Click" />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Request_id], [First_name], [Last_name], [Department], [Request_status] FROM [accessuser]"></asp:SqlDataSource>
         <br />
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Request_Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" style="margin-right: 0px" Width="995px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Request_id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="995px">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField DataField="Request_Id" HeaderText="Request_Id" ReadOnly="True" SortExpression="Request_Id" />
-                <asp:BoundField DataField="First_Name" HeaderText="First_Name" SortExpression="First_Name" />
-                <asp:BoundField DataField="Last_Name" HeaderText="Last_Name" SortExpression="Last_Name" />
+                <asp:TemplateField>
+                    <EditItemTemplate>
+                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:BoundField DataField="Request_id" HeaderText="Request_id" ReadOnly="True" SortExpression="Request_id" />
+                <asp:BoundField DataField="First_name" HeaderText="First_name" SortExpression="First_name" />
+                <asp:BoundField DataField="Last_name" HeaderText="Last_name" SortExpression="Last_name" />
                 <asp:BoundField DataField="Department" HeaderText="Department" SortExpression="Department" />
-                <asp:BoundField DataField="Request_Status" HeaderText="Request_Status" SortExpression="Request_Status" />
+                <asp:BoundField DataField="Request_status" HeaderText="Request_status" SortExpression="Request_status" />
             </Columns>
             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
@@ -53,6 +61,7 @@
             <SortedDescendingCellStyle BackColor="#FCF6C0" />
             <SortedDescendingHeaderStyle BackColor="#820000" />
         </asp:GridView>
+        <br />
         </form>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="server">

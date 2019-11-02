@@ -14,13 +14,13 @@
     </p>
     <p>
         Password&nbsp;
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" type="password" runat="server"></asp:TextBox>
     </p>
     <p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" class= "button" Text="Login" OnClick="Button1_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" class= "button" Text="Sign up" />
+        <asp:Button ID="Button2" runat="server" class= "button" Text="Sign up" OnClick="Button2_Click" />
     </p>
 </form>
 
