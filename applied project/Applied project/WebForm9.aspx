@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="WebForm9.aspx.cs" Inherits="Applied_project.WebForm8" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="WebForm9.aspx.cs" Inherits="Applied_project.WebForm9" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
         CLUB MANAGEMENT</p>
@@ -13,7 +13,7 @@
     <form id="form1" runat="server">
     
         <h2> USER PROFILE</h2>
-        <p> 
+        <p>
             Email Address
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         </p>
@@ -32,7 +32,7 @@
         <p>
             Date of Birth <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
            <i class="fa fa-calendar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i><asp:Label ID="Label1" runat="server">Access request is Pending Approval</asp:Label>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i>Access request is&nbsp;<asp:Label ID="Label1" runat="server">Pending Approval</asp:Label>
         </p>
         <p>
             Access Type

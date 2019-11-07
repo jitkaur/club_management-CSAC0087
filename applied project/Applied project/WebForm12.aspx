@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="WebForm12.aspx.cs" Inherits="Applied_project.WebForm11" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="WebForm12.aspx.cs" Inherits="Applied_project.WebForm12" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    <p>
         CLUB MANAGEMENT</p>
 </asp:Content>
@@ -28,13 +28,13 @@
         <i class="fa fa-search" style="border-color: #FFFFFF; background-color: #FFFFFF; "></i>
         &nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:Button ID="Button1" class= "button" runat="server" Text="Search" OnClick="Button1_Click" />
-        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;
         <asp:Button ID="Button2" class= "button" runat="server" Text="Approve" OnClick="Button2_Click" />
 &nbsp;<asp:Button ID="Button3" class= "button" runat="server" Text="Decline" OnClick="Button3_Click" />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Request_id], [First_name], [Last_name], [Department], [Request_status] FROM [accessuser]"></asp:SqlDataSource>
         <br />
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Request_id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="995px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Request_id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="995px" AllowSorting="True">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:TemplateField>
@@ -42,7 +42,7 @@
                         <asp:CheckBox ID="CheckBox1" runat="server" />
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                        <asp:CheckBox ID="CheckBox1" cssclass="mycheckbox" runat="server" />
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="Request_id" HeaderText="Request_id" ReadOnly="True" SortExpression="Request_id" />

@@ -85,13 +85,35 @@ input,date[type=text] {
     width:120px;
 }
 .DropDownList{
-    padding: 8px 20px;
+    padding: 4px 15px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     width:240px;
     height:30px;
+}
+
+.mycheckbox input[type='checkbox']
+{
+    width: 20px;
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+.button:hover {
+  background-color: mediumseagreen;
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */

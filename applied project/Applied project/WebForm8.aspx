@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="WebForm8.aspx.cs" Inherits="Applied_project.WebForm7" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="WebForm8.aspx.cs" Inherits="Applied_project.WebForm8" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <p>
         CLUB MANAGEMENT</p>
@@ -40,6 +40,8 @@
                 <asp:ListItem>Management</asp:ListItem>
                 <asp:ListItem>Member</asp:ListItem>
             </asp:DropDownList>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            <asp:Label ID="Label1" runat="server" Font-Size="13px"></asp:Label>
         </p>
         <p>
             Phone Number <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>

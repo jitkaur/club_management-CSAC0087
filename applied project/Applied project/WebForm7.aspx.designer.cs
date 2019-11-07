@@ -10,7 +10,7 @@
 namespace Applied_project {
     
     
-    public partial class WebForm13 {
+    public partial class WebForm7 {
         
         /// <summary>
         /// form1 control.

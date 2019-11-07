@@ -14,22 +14,23 @@ namespace Applied_project
         protected void Page_Load(object sender, EventArgs e)
         {
             try
-            {
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-                
-                conn.Open();
-                string qry = "select fname, lname from signup";
-                SqlCommand cmd = new SqlCommand(qry, conn);
-                SqlDataReader sdr = cmd.ExecuteReader();
-                if(sdr.Read())
-                {                    
-                    Label1.Text = sdr.GetString(0);
+                {
+                    SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+
+                    conn.Open();
+                    string qry = "select fname and lname from signup";
+                    SqlCommand cmd = new SqlCommand(qry, conn);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.Read())
+                    {
+                        Label1.Text = sdr.GetString(0);
+                    }
+                    conn.Close();
                 }
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                Response.Write(ex.Message);
+                catch (Exception ex)
+                {
+                    Response.Write(ex.Message);
+                }
             }
         }
     }

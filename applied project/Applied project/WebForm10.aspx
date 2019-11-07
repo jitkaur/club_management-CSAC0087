@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="WebForm10.aspx.cs" Inherits="Applied_project.WebForm9" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="WebForm10.aspx.cs" Inherits="Applied_project.WebForm10" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
     <p>
         CLUB MANAGEMENT</p>
@@ -16,22 +16,23 @@
     <p style="font-size: large">
         USERS</p>
         <p style="text-align: right">
-        <i class="fa fa-eye" style="padding: 5px; border-style: outset; border-width: thin; background-color: #f1f1f1;">View</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <i class="fa fa-pencil" style="padding: 5px; border-width: thin; border-style: outset; background-color: #f1f1f1;">Edit</i></p>
+            <asp:LinkButton ID="LinkButton1" class="btn" runat="server" OnClick="LinkButton1_Click"><i class="fa fa-eye">View</i></asp:LinkButton>&nbsp;&nbsp;
+            <asp:LinkButton ID="LinkButton2" class="btn" runat="server" OnClick="LinkButton2_Click"><i class="fa fa-pencil">Edit</i></asp:LinkButton>&nbsp;</p>
+        <br />
         Department
         <asp:DropDownList ID="DropDownList1" class="DropDownList" runat="server" Width="174px">
             <asp:ListItem>All</asp:ListItem>
         </asp:DropDownList>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa fa-search" style="border-color: #FFFFFF; background-color: #FFFFFF; "></i>
         &nbsp;<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <asp:Button ID="Button1" class="button" runat="server" Text="Search" />
         <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [User Id] AS User_Id, [First Name] AS First_Name,
-            [Last Name] AS Last_Name, [Department], [Access Type] AS Access_Type FROM [user]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [User_Id], [First_Name], [Last_Name], [Access_Type], [Department] FROM [auser]"></asp:SqlDataSource>
         &nbsp;
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="User_Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="995px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="User_Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="995px" AllowSorting="True">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:TemplateField>
@@ -39,9 +40,8 @@
                         <asp:CheckBox ID="CheckBox1" runat="server" />
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:CheckBox ID="CheckBox1" runat="server" />
+                        <asp:CheckBox ID="CheckBox1" cssclass="mycheckbox" runat="server" />
                     </ItemTemplate>
-                    <ControlStyle Width="85px" />
                 </asp:TemplateField>
                 <asp:BoundField DataField="User_Id" HeaderText="User_Id" ReadOnly="True" SortExpression="User_Id" />
                 <asp:BoundField DataField="First_Name" HeaderText="First_Name" SortExpression="First_Name" />

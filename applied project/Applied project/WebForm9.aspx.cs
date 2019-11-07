@@ -9,11 +9,11 @@ using System.Configuration;
 
 namespace Applied_project
 {
-    public partial class WebForm8 : System.Web.UI.Page
+    public partial class WebForm9 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = Session["Condtion"].ToString();
+            //Label1.Text = Session["Condtion"].ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -38,6 +38,23 @@ namespace Applied_project
                     DropDownList2.SelectedValue = (sdr["department"].ToString());
                     TextBox7.Text = (sdr["address"].ToString());
                     TextBox8.Text = (sdr["address2"].ToString());
+                    sdr.Close();
+
+                    string qery = "select * from accessuser where Request_id='" + eml + "'";
+                    SqlCommand cmed = new SqlCommand(qery, conn);
+                    SqlDataReader sedr = cmed.ExecuteReader();
+                    if (sedr.Read())
+                    {
+                        if(sedr["Request_status"].ToString() == "Active")
+                        {
+                            Label1.Text = "Pending Approval";
+                        }
+                        else
+                        {
+                            Label1.Text = sedr["Request_status"].ToString();
+                        }                        
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Check your data');", true);
+                    }
                 }
                 else
                 {

@@ -9,12 +9,21 @@ using System.Configuration;
 
 namespace Applied_project
 {
-    public partial class WebForm7 : System.Web.UI.Page
+    public partial class WebForm8 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             //Response.Cache.SetCacheability(HttpCacheability.NoCache);            
             //TextBox1.Text = string.Empty;
+             /*   TextBox2.ReadOnly = true;
+                TextBox3.Enabled = false;
+                TextBox4.Enabled = false;
+                TextBox5.Enabled = false;
+                TextBox6.Enabled = false;
+                TextBox7.Enabled = false;
+                TextBox8.Enabled = false;
+                DropDownList1.Enabled = false;
+                DropDownList2.Enabled = false; */             
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -52,6 +61,11 @@ namespace Applied_project
             catch (Exception ex)
             {
                 Response.Write("error" + ex.ToString());
+            }
+            if (DropDownList1.SelectedValue == "Member")
+            {
+                Button2.Enabled = false;
+                Label1.Text = "Member is not allowed to request elevated access";
             }
         }
 

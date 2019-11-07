@@ -13,7 +13,7 @@ namespace Applied_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -28,8 +28,8 @@ namespace Applied_project
                 SqlCommand cmd = new SqlCommand(qry, conn);
                 SqlDataReader sdr = cmd.ExecuteReader();
                 if(sdr.Read())
-                {
-                    if(TextBox1.Text == "admin@gmail.com")
+                {                    
+                    if (TextBox1.Text == "admin@gmail.com")
                     {
                         ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Login has been done successfully');window.location.href='admin/WebForm3.aspx';", true);
                     }
